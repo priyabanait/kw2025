@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import { Add, Edit, Delete } from '@mui/icons-material';
 
-const API_BASE_URL = 'http://localhost:5000/api/employee';
+const API_BASE_URL = 'https://kwbackend.vercel.app/api/employee';
 
 const emptyForm = {
   name: '',
@@ -48,7 +48,7 @@ const EmployeeManagement = () => {
   // Open modal
   const handleOpen = (emp = emptyForm) => {
     setForm({ ...emp, profileImage: null });
-    setPreview(emp.profileImage ? `http://localhost:5000/${emp.profileImage}` : null);
+    setPreview(emp.profileImage ? `https://kwbackend.vercel.app/${emp.profileImage}` : null);
     setEditId(emp._id || null);
     setOpen(true);
   };
@@ -163,7 +163,7 @@ const EmployeeManagement = () => {
                   <TableRow key={item._id}>
                     <TableCell>
                       {item.profileImage ? (
-                        <Avatar src={`http://localhost:5000/${item.profileImage}`} alt={item.name} />
+                        <Avatar src={`https://kwbackend.vercel.app/${item.profileImage}`} alt={item.name} />
                       ) : (
                         <Avatar>{item.name?.[0]}</Avatar>
                       )}

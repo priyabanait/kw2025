@@ -38,7 +38,7 @@ import { newsService } from 'api/news';
 import RichTextEditor from 'components/RichTextEditor';
 
 // Backend URL constant
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = 'https://kwbackend.vercel.app';
 
 const NewsManagement = () => {
   const [news, setNews] = useState([]);

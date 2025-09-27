@@ -393,7 +393,7 @@ const EventManagement = () => {
                   <TableCell>
                     {event.coverImage && (
                       <img
-                        src={`http://localhost:5000/${event.coverImage}`}
+                        src={`https://kwbackend.vercel.app/${event.coverImage}`}
                         alt={event.title}
                         style={{ width: '50px', height: '50px', objectFit: 'cover' }}
                       />
@@ -453,7 +453,7 @@ const EventManagement = () => {
             <Box>
               {selectedEventContent.coverImage && (
                 <img
-                  src={`http://localhost:5000/${selectedEventContent.coverImage}`}
+                  src={`https://kwbackend.vercel.app/${selectedEventContent.coverImage}`}
                   alt={selectedEventContent.title}
                   style={{ width: '100%', maxHeight: '300px', objectFit: 'cover', marginBottom: '20px' }}
                 />

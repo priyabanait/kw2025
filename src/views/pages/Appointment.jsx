@@ -73,7 +73,7 @@ const Appointment = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch('http://localhost:5000/api/leads');
+        const res = await fetch('https://kwbackend.vercel.app/api/leads');
         const data = await res.json();
       
       if (Array.isArray(data)) {
@@ -96,7 +96,7 @@ const Appointment = () => {
   const fetchAppointments = async () => {
     try {
       // Fetch appointments from the leads API
-      const res = await fetch('http://localhost:5000/api/leads');
+      const res = await fetch('https://kwbackend.vercel.app/api/leads');
       const data = await res.json();
       
       if (Array.isArray(data)) {
@@ -124,7 +124,7 @@ const Appointment = () => {
       }
 
       // Submit to real API
-      const res = await fetch('http://localhost:5000/api/leads', {
+      const res = await fetch('https://kwbackend.vercel.app/api/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ const Appointment = () => {
       }
 
       // Update via API
-      const res = await fetch(`http://localhost:5000/api/leads/${selectedAppointment._id}`, {
+      const res = await fetch(`https://kwbackend.vercel.app/api/leads/${selectedAppointment._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ const Appointment = () => {
   const handleDelete = async () => {
     try {
       // Delete via API
-      const res = await fetch(`http://localhost:5000/api/leads/${selectedAppointment._id}`, {
+      const res = await fetch(`https://kwbackend.vercel.app/api/leads/${selectedAppointment._id}`, {
         method: 'DELETE',
       });
 

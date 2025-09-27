@@ -11,7 +11,7 @@ const InstantValuation = () => {
       setLoading(true);npm
       setError(null);
       try {
-        const res = await fetch('http://localhost:5000/api/leads');
+        const res = await fetch('https://kwbackend.vercel.app/api/leads');
         const data = await res.json();
         const filtered = Array.isArray(data) ? data.filter(lead => lead.formType === 'instant-valuation') : [];
         setValuations(filtered);

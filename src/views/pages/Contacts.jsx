@@ -46,7 +46,7 @@ export default function Leads() {
   const handleDownloadExcel = async () => {
     try {
       setLoading(true);
-      let url = 'http://localhost:5000/api/leads-export';
+      let url = 'https://kwbackend.vercel.app/api/leads-export';
       const params = new URLSearchParams();
       
       // Add formType filter (except 'contactus' which is 'contact-us')
@@ -101,7 +101,7 @@ export default function Leads() {
     setLoading(true);
     try {
       const query = timeFilter === 'all' ? '' : `?range=${timeFilter}`;
-      const res = await fetch(`http://localhost:5000/api/leads${query}`);
+      const res = await fetch(`https://kwbackend.vercel.app/api/leads${query}`);
       const data = await res.json();
       // Backend returns { success: true, data: [...] }
       setLeads(Array.isArray(data.data) ? data.data : []);
@@ -119,7 +119,7 @@ export default function Leads() {
   // Handle lead update
   const handleUpdateLead = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/leads/${selectedLead._id}`, {
+      const res = await fetch(`https://kwbackend.vercel.app/api/leads/${selectedLead._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ export default function Leads() {
   // Handle lead deletion
   const handleDeleteLead = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/leads/${selectedLead._id}`, {
+      const res = await fetch(`https://kwbackend.vercel.app/api/leads/${selectedLead._id}`, {
         method: 'DELETE',
       });
 

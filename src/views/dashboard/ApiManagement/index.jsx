@@ -18,7 +18,7 @@ const HeaderFooterPage = () => {
   // Fetch initial data
   useEffect(() => {
     setLoading(true);
-    fetch('http://localhost:5000/api/api-management/')
+    fetch('https://kwbackend.vercel.app/api/api-management/')
       .then((res) => res.json())
       .then((data) => {
         setHeaderContent(data.header || '');
@@ -41,7 +41,7 @@ const HeaderFooterPage = () => {
     };
     try {
       // Use PUT to update (or POST for first time)
-      const res = await fetch('http://localhost:5000/api/api-management/', {
+      const res = await fetch('https://kwbackend.vercel.app/api/api-management/', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

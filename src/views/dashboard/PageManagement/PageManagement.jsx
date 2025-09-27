@@ -35,7 +35,7 @@ export default function PageManagement() {
   const fetchPages = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/pages');
+      const res = await axios.get('https://kwbackend.vercel.app/api/pages');
       setPages(res.data);
     } catch (e) {
       setPages([]);
@@ -59,7 +59,7 @@ export default function PageManagement() {
         page.backgroundImage
           ? page.backgroundImage.startsWith('http')
             ? page.backgroundImage
-            : `http://localhost:5000/${page.backgroundImage.replace(/\\/g, '/')}`
+            : `https://kwbackend.vercel.app/${page.backgroundImage.replace(/\\/g, '/')}`
           : null
       );
       setEditId(page._id);
@@ -101,11 +101,11 @@ export default function PageManagement() {
         }
       });
       if (editId) {
-        await axios.put(`http://localhost:5000/api/page/${editId}`, formData, {
+        await axios.put(`https://kwbackend.vercel.app/api/page/${editId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
       } else {
-        await axios.post('http://localhost:5000/api/page', formData, {
+        await axios.post('https://kwbackend.vercel.app/api/page', formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
       }
@@ -124,7 +124,7 @@ export default function PageManagement() {
   // Delete a page
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/page/${deleteId}`);
+      await axios.delete(`https://kwbackend.vercel.app/api/page/${deleteId}`);
       await fetchPages();
       setDeleteDialog(false);
       setDeleteId(null);
@@ -177,7 +177,7 @@ export default function PageManagement() {
                             row.backgroundImage
                               ? row.backgroundImage.startsWith('http')
                                 ? row.backgroundImage
-                                : `http://localhost:5000/${row.backgroundImage.replace(/\\/g, '/')}`
+                                : `https://kwbackend.vercel.app/${row.backgroundImage.replace(/\\/g, '/')}`
                               : ""
                           }
                           alt="bg"
@@ -320,7 +320,7 @@ export default function PageManagement() {
 //         backgroundOverlayContent: page.backgroundOverlayContent || "",
 //         backgroundImage: null,
 //       });
-//       setPreview(page.backgroundImage ? `http://localhost:5000/${page.backgroundImage.replace(/\\/g, "/")}` : null);
+//       setPreview(page.backgroundImage ? `https://kwbackend.vercel.app/${page.backgroundImage.replace(/\\/g, "/")}` : null);
 //       setEditId(page._id);
 //     } else {
 //       setForm(defaultForm);
@@ -427,7 +427,7 @@ export default function PageManagement() {
 //                     <TableCell>
 //                       {row.backgroundImage && (
 //                         <img
-//                           src={`http://localhost:5000/${row.backgroundImage.replace(/\\/g, "/")}`}
+//                           src={`https://kwbackend.vercel.app/${row.backgroundImage.replace(/\\/g, "/")}`}
 //                           alt="bg"
 //                           style={{ width: 80, height: 40, objectFit: "cover", borderRadius: 4, border: "1px solid #eee" }}
 //                         />

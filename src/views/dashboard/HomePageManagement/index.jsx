@@ -216,7 +216,7 @@ export default function HomePageManagement() {
                       {row.backgroundImage?.map((img, idx) => (
                         <img
                           key={idx}
-                          src={`http://localhost:5000/${img.replace(/\\/g, '/')}`}
+                          src={`https://kwbackend.vercel.app/${img.replace(/\\/g, '/')}`}
                           alt="bg"
                           style={{ width: 80, height: 40, objectFit: 'cover', borderRadius: 4, border: '1px solid #eee', marginRight: 6 }}
                         />
@@ -277,7 +277,7 @@ export default function HomePageManagement() {
                     {existingImages.map((src, idx) => (
                       <Box key={`existing-${idx}`} position="relative">
                         <img
-                          src={`http://localhost:5000/${src.replace(/\\/g, '/')}`}
+                          src={`https://kwbackend.vercel.app/${src.replace(/\\/g, '/')}`}
                           alt={`Existing ${idx + 1}`}
                           style={{ width: 60, height: 60, objectFit: 'cover', borderRadius: 4, border: '1px solid #eee' }}
                         />
@@ -344,7 +344,7 @@ export default function HomePageManagement() {
                 {viewPage.backgroundImage?.map((img, idx) => (
                   <img
                     key={idx}
-                    src={`http://localhost:5000/${img.replace(/\\/g, '/')}`}
+                    src={`https://kwbackend.vercel.app/${img.replace(/\\/g, '/')}`}
                     alt={`bg-${idx}`}
                     style={{
                       width: 200,

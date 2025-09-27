@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api' || import.meta.env.VITE_API_URL;
+const API_URL = 'https://kwbackend.vercel.app/api' || import.meta.env.VITE_API_URL;
 
 
 export const translationService = {

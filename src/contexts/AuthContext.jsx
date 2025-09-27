@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
       console.log('Attempting login with:', phoneNumber); // Debug log
       
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/login`,
+        `${import.meta.env.VITE_API_URL || 'https://kwbackend.vercel.app/api'}/auth/login`,
         {
           phoneNumber, // Keep your phone number field
           password
@@ -91,7 +91,7 @@ const AuthProvider = ({ children }) => {
       setLoading(true);
 
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/register`,
+        `${import.meta.env.VITE_API_URL || 'https://kwbackend.vercel.app/api'}/auth/register`,
         userData,
         {
           headers: { 'Content-Type': 'application/json' },

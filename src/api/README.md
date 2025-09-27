@@ -3,7 +3,7 @@
 This document outlines all the API endpoints available in the Vite frontend for CRUD operations.
 
 ## Base URL
-All API calls use the base URL: `http://localhost:5000/api`
+All API calls use the base URL: `https://kwbackend.vercel.app/api`
 
 ## 1. Blog API (`blog.js`)
 

@@ -133,7 +133,7 @@ const UserManagement = () => {
       role: user.role,
       phoneNumber: user.phoneNumber || ''
     });
-    setImagePreview(user.profileImage ? (user.profileImage.startsWith('http') ? user.profileImage : `http://localhost:5000/${user.profileImage.replace(/^\\?/, '')}`) : null);
+    setImagePreview(user.profileImage ? (user.profileImage.startsWith('http') ? user.profileImage : `https://kwbackend.vercel.app/${user.profileImage.replace(/^\\?/, '')}`) : null);
     setIsEditing(true);
   };
 
@@ -277,7 +277,7 @@ const UserManagement = () => {
               <Box sx={{ textAlign: 'center', mb: 2 }}>
                 {selectedUserDetails.profileImage ? (
                 <Avatar
-                    src={selectedUserDetails.profileImage.startsWith('http') ? selectedUserDetails.profileImage : `http://localhost:5000/${selectedUserDetails.profileImage.replace(/^\\?/, '')}`}
+                    src={selectedUserDetails.profileImage.startsWith('http') ? selectedUserDetails.profileImage : `https://kwbackend.vercel.app/${selectedUserDetails.profileImage.replace(/^\\?/, '')}`}
                   alt={selectedUserDetails.name}
                     sx={{ width: 80, height: 80, margin: 'auto' }}
                   />

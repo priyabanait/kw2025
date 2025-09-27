@@ -309,7 +309,7 @@ const EmployeeManagement = () => {
                       <TableRow key={emp._id}>
                         <TableCell>
                           <Avatar
-                            src={emp.profileImage ? (emp.profileImage.startsWith('http') ? emp.profileImage : `http://localhost:5000/${emp.profileImage}`) : ""}
+                            src={emp.profileImage ? (emp.profileImage.startsWith('http') ? emp.profileImage : `https://kwbackend.vercel.app/${emp.profileImage}`) : ""}
                             alt={emp.name}
                           >
                             {emp.name?.charAt(0)}
@@ -557,7 +557,7 @@ const EmployeeManagement = () => {
             <Box sx={{ mt: 2 }}>
               <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
                 <Avatar
-                  src={selectedEmployee.profileImage ? `http://localhost:5000/${selectedEmployee.profileImage}` : ""}
+                  src={selectedEmployee.profileImage ? `https://kwbackend.vercel.app/${selectedEmployee.profileImage}` : ""}
                   alt={selectedEmployee.name}
                   sx={{ width: 100, height: 100, fontSize: '2rem' }}
                 >
