@@ -19,5 +19,5 @@
     },
     "exclude": ["node_modules"],
     "include": ["src", "**/*.js", "**/*.jsx", "src/**/*"],
-    "references": [{ "path": "./jsconfig.node.json" }]
+    
 }
